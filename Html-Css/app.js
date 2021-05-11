@@ -71,4 +71,17 @@ class Word {
       notification.classList.remove("show");
     }, 2000);
   }
+  static popup() {
+    if (letter.every((n, index) => n.innerHTML === theWord[index])) {
+      finalMessage.textContent = "Congratulations! You won! 😀";
+      finalMessageRevealWord.textContent = `...the word was: ${theWord}`;
+      popupContainer.style.display = "flex";
+      playable = false;
+    } else if (wrongEntry === 5) {
+      finalMessage.textContent = "Unfortunately you lost. 😕";
+      finalMessageRevealWord.textContent = `...the word was: ${theWord}`;
+      popupContainer.style.display = "flex";
+      playable = false;
+    }
+  }
 }
