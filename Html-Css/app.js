@@ -95,3 +95,7 @@ class Word {
     playable = true;
   }
 }
+
+document.addEventListener("keypress", (new Word).writeLetter);
+
+playButton.addEventListener("click", Word.playAgain);
