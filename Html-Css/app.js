@@ -33,3 +33,12 @@ let letter = Array.from({length: 11}, (_, index) => index = document.createEleme
 letter.map(i => i.classList.add("letter"));
 letter.map(i => word.appendChild(i));
 
+const popupContainer = document.getElementById("popup-container");
+const finalMessage = document.getElementById("final-message");
+const finalMessageRevealWord = document.getElementById("final-message-reveal-word");
+const playButton = document.getElementById("play-button");
+
+const notification = document.getElementById("notification-container");
+
+let playable = true;
+
