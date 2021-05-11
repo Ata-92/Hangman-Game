@@ -48,6 +48,20 @@ class Word {
       if (theWord.includes(key.key) && letter.every(i => !i.innerHTML.includes(key.key))) {
         letter.map((n, index) => theWord[index] === key.key ? n.innerHTML = key.key : null);
         Word.popup();
+      } else if ((theWord.includes(key.key) && letter.some(i => i.innerHTML.includes(key.key))) || spanElem.innerText.includes(key.key)) {
+        const wordObject = new Word();
+        wordObject.notify();
+      } else if (!theWord.includes(key.key)) {
+        if (wrongEntry >= 5) {
+          spanElem.innerText += key.key;
+          hangman[wrongEntry].style.display = "initial";
+          Word.popup();
+        } else {
+          pElem.textContent = "Wrong";
+          spanElem.innerText += key.key + ", ";
+          hangman[wrongEntry].style.display = "initial";
+          ++wrongEntry;
+        }
       }
     }
   }
