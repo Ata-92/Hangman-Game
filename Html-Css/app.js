@@ -42,3 +42,13 @@ const notification = document.getElementById("notification-container");
 
 let playable = true;
 
+class Word {
+  writeLetter(key) {
+    if ("abcdefghijklmnopqrstuvwxyz".includes(key.key) && playable) {
+      if (theWord.includes(key.key) && letter.every(i => !i.innerHTML.includes(key.key))) {
+        letter.map((n, index) => theWord[index] === key.key ? n.innerHTML = key.key : null);
+        Word.popup();
+      }
+    }
+  }
+}
