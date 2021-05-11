@@ -84,4 +84,14 @@ class Word {
       playable = false;
     }
   }
+  static playAgain() {
+    popupContainer.style.display = "none";
+    Array.from(hangman).map(i => i.style.display = "none");
+    pElem.textContent = "";
+    spanElem.innerText = "";
+    letter.map(i => i.innerHTML = "");
+    wrongEntry = 0;
+    theWord = theWordList[wordRank];
+    playable = true;
+  }
 }
