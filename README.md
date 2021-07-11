@@ -1,6 +1,10 @@
 ## Hangman Game
 
-Select a letter to figure out a hidden word in a set amount of chances
+👉 [Hangman Game Website](https://ata-92.github.io/Hangman-Game/)
+
+## My Outcome
+
+![Hangman-Game](hangman-game.gif)
 
 ## Project Specifications
 
@@ -11,7 +15,3 @@ Select a letter to figure out a hidden word in a set amount of chances
 - Show notification when select a letter twice
 - Show popup on win or lose
 - Play again button to reset game
-
-## My Outcome
-
-![Hangman-Game](hangman-game.gif)
